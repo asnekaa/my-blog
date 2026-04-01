@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-bg: #f8f9fa;
     --color-text: #212529;
     --color-text-muted: #6c757d;
@@ -19,4 +19,34 @@ body {
     color: var(--color-text-main);
     font-family: var(--font-family-base);
     line-height: var(--line-height-base);
+}
+
+.site-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);  /* 添加轻微的阴影效果 */
+    padding: 1rem 5%;  /* 采用百分比实现基础的响应式内边距 */
+}
+
+brand-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text-main);
+    text-decoration: none;  /* 移除默认的下划线 */
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;  /* Flex 子项标准间距 */
+    list-style: none;  /* 移除列表默认的圆点标记 */
+}
+
+.nav-link {
+    color: var(--color-text-muted);
+    text-decoration: none;  /* 移除默认的下划线 */
+    font-weight: 500;
+    transition: color 0.3s ease;  /* 添加颜色过渡效果 */
+}
+
+.nav.link:hover {
+    color: var(--color-primary);  /* 鼠标悬停时切换为主色调 */
 }
