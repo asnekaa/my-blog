@@ -14,19 +14,10 @@
     padding: 0;
 }
 
-/* 启用全局平滑滚动效果 */
-html {
-    scroll-behavior: smooth;
-}
 
-/* 页面区块布局 */
-.page-section {
-    min-height: 100vh;  /* 最小高度设定为 100% 视口高度 */
-    padding: 6rem 5% 2rem;  /* 顶部预留 6rem 空间，防止固定导航栏遮挡内容 */
-    display: flex;
-    flex-direction: column;  /* 纵向排列子元素 */
-    justify-content: center;  /* 垂直居中对齐内容 */
-    border-bottom: 1px solid #eaeaea;  /* 临时添加的分隔线，分隔不同的页面区域 */
+html {
+    scroll-behavior: smooth;  /* 启用全局平滑滚动效果 */
+    scroll-snap-type: y mandatory;  /* 启用 Y 轴强制滚动捕捉 */
 }
 
 body {
@@ -37,9 +28,15 @@ body {
 }
 
 .site-header {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.7);  /* 半透明白色背景 */
+    backdrop-filter: blur(12px);  /* 添加背景模糊效果（毛玻璃） */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);  /* 添加轻微的阴影效果 */
     padding: 1rem 5%;  /* 采用百分比实现基础的响应式内边距 */
+    position: fixed;  /* 固定在页面顶部 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* 确保导航栏在其他内容之上 */
 }
 
 .main-nav {
@@ -72,4 +69,17 @@ body {
 
 .nav-link:hover {
     color: var(--color-primary);  /* 鼠标悬停时切换为主色调 */
+}
+
+/* 页面区块布局 */
+.page-section {
+    height: 100vh;  /* 强制高度为 100% 视口高度，适应局部切换 */
+    scroll-snap-align: start;  /* 滚动停止时对齐到区块顶部 */
+    scroll-snap-stop: always;  /* 强制每次滚动仅切换一个区块 */
+    padding: 6rem 5% 2rem;  /* 顶部预留 6rem 空间，防止固定导航栏遮挡内容 */
+    display: flex;
+    flex-direction: column;  /* 纵向排列子元素 */
+    justify-content: center;  /* 垂直居中对齐内容 */
+    position: relative;  /* 允许子元素使用绝对定位 */
+    overflow: hidden;  /* 隐藏溢出内容 */
 }
