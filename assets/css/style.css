@@ -1,6 +1,6 @@
 :root {
     --color-bg: #f8f9fa;
-    --color-text: #212529;
+    --color-text-main: #212529;
     --color-text-muted: #6c757d;
     --color-primary: #0d6efd;
 
@@ -27,7 +27,15 @@ body {
     padding: 1rem 5%;  /* 采用百分比实现基础的响应式内边距 */
 }
 
-brand-logo {
+.main-nav {
+    display: flex;
+    justify-content: space-between;  /* 主导航内容两端对齐 */
+    align-items: center;  /* 垂直居中对齐 */
+    max-width: 1200px;  /* 设置最大宽度，保持内容不太宽 */
+    margin: 0 auto;  /* 水平居中 */
+}
+
+.brand-logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-text-main);
@@ -47,6 +55,6 @@ brand-logo {
     transition: color 0.3s ease;  /* 添加颜色过渡效果 */
 }
 
-.nav.link:hover {
+.nav-link:hover {
     color: var(--color-primary);  /* 鼠标悬停时切换为主色调 */
 }
