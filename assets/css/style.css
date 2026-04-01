@@ -14,6 +14,21 @@
     padding: 0;
 }
 
+/* 启用全局平滑滚动效果 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 页面区块布局 */
+.page-section {
+    min-height: 100vh;  /* 最小高度设定为 100% 视口高度 */
+    padding: 6rem 5% 2rem;  /* 顶部预留 6rem 空间，防止固定导航栏遮挡内容 */
+    display: flex;
+    flex-direction: column;  /* 纵向排列子元素 */
+    justify-content: center;  /* 垂直居中对齐内容 */
+    border-bottom: 1px solid #eaeaea;  /* 临时添加的分隔线，分隔不同的页面区域 */
+}
+
 body {
     background-color: var(--color-bg);
     color: var(--color-text-main);
