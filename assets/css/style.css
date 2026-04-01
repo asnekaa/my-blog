@@ -83,3 +83,89 @@ body {
     position: relative;  /* 允许子元素使用绝对定位 */
     overflow: hidden;  /* 隐藏溢出内容 */
 }
+
+.section-home {
+    background: linear-gradient(135deg, #fbfbfb 0%, #ebedee 100%);
+}
+
+.section-articles {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.section-about {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* 首页主视觉排版 */
+.hero-content {
+    text-align: center;
+    z-index: 1;  /* 确保内容在背景之上 */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+}
+
+/* 按钮 */
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;  /* 圆形按钮 */
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* 添加过渡效果 */
+}
+
+/* 按钮悬停交互状态 */
+.btn-primary:hover {
+    transform: translateY(-3px);  /* 悬停时轻微提升按钮 */
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);  /* 添加悬停阴影效果 */
+}
+
+/* 文章区块卡片网格布局 */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--color-text-main);
+}
+
+/* 卡片组件样式 */
+.card {
+    background-color: rgba(255, 255, 255, 0.6);  /* 半透明白色背景 */
+    backdrop-filter: blur(10px);  /* 添加背景模糊效果（毛玻璃） */
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 关于我区块卡片 */
+.about-card {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 4rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+}
+
+/* 头像占位符 */
+.avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 50%;
+    /* 强制渲染为正圆形 */
+    margin: 0 auto 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
