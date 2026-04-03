@@ -63,7 +63,7 @@ html, body {
 
 /* 页面区块布局 */
 .page-section {
-    position: active;  /* 绝对定位，使所有区块脱离文档流并重叠 */
+    position: absolute;  /* 绝对定位，重叠在一起 */
     top: 0;
     left: 0;
     width: 100%;
@@ -93,6 +93,14 @@ html, body {
 
 .section-articles {
     background: linear-gradient(135deg, #8fd3f4 0%, #84fab0 100%);
+}
+
+.section-weird {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.section-projects {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 .section-about {
