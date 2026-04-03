@@ -1,6 +1,4 @@
-// 监听 DOMContentLoaded 事件，确保 HTML 文档完全解析后再执行脚本
 document.addEventListener('DOMContentLoaded', () => {
-    // 获取所有的导航链接和页面区块节点
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.page-section');
 
