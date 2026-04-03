@@ -1,14 +1,8 @@
-/* 全局变量声明 */
 :root {
-    /* 颜色 */
     --color-bg: #eef2f9;
     --color-text-main: #1e293b;
     --color-text-muted: #64748b;
     --color-primary: #3b82f6;
-
-    /* 排版 */
-    --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --line-height-base: 1.6;
 }
 
 *, *::before, *::after {
@@ -16,7 +10,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 html, body {
     overflow: hidden;  /* 禁止页面滚动，强制使用局部滚动 */
