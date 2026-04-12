@@ -1,27 +1,14 @@
-/* 全局变量声明 */
 :root {
-    /* 颜色 */
     --color-bg: #eef2f9;
     --color-text-main: #1e293b;
     --color-text-muted: #64748b;
     --color-primary: #3b82f6;
-
-    /* 排版 */
-    --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --line-height-base: 1.6;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-
-html, body {
-    overflow: hidden;  /* 禁止页面滚动，强制使用局部滚动 */
-    width: 100%;
-    height: 100%;
 }
 
 .site-header {
@@ -70,7 +57,7 @@ html, body {
 
 /* 页面区块布局 */
 .page-section {
-    position: active;  /* 绝对定位，使所有区块脱离文档流并重叠 */
+    position: absolute;  /* 绝对定位，重叠在一起 */
     top: 0;
     left: 0;
     width: 100%;
@@ -100,6 +87,14 @@ html, body {
 
 .section-articles {
     background: linear-gradient(135deg, #8fd3f4 0%, #84fab0 100%);
+}
+
+.section-weird {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.section-projects {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 .section-about {
